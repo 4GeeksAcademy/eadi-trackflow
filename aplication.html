@@ -78,19 +78,19 @@
 
             <div>
               <label for="nombreEmpresa" class="mb-1 block text-sm font-medium">Nombre de la empresa *</label>
-              <input id="nombreEmpresa" name="nombreEmpresa" type="text" required minlength="2" maxlength="120" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-cyan-200/60 transition focus:ring" />
+              <input id="nombreEmpresa" name="nombreEmpresa" type="text" required minlength="2" maxlength="120" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-amber-300/60 transition focus:ring" />
               <p class="mt-1 text-xs text-rose-300" data-error-for="nombreEmpresa"></p>
             </div>
 
             <div>
               <label for="correoEmpresa" class="mb-1 block text-sm font-medium">Correo electrónico *</label>
-              <input id="correoEmpresa" name="correoEmpresa" type="email" required maxlength="180" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-cyan-200/60 transition focus:ring" />
+              <input id="correoEmpresa" name="correoEmpresa" type="email" required maxlength="180" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-amber-300/60 transition focus:ring" />
               <p class="mt-1 text-xs text-rose-300" data-error-for="correoEmpresa"></p>
             </div>
 
             <div>
               <label for="consultaLogistica" class="mb-1 block text-sm font-medium">Consulta *</label>
-              <textarea id="consultaLogistica" name="consultaLogistica" rows="6" required minlength="20" maxlength="1200" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-cyan-200/60 transition focus:ring" placeholder="Cuéntanos qué volumen gestionas, dónde operas y qué parte de la logística necesitas externalizar."></textarea>
+              <textarea id="consultaLogistica" name="consultaLogistica" rows="6" required minlength="20" maxlength="1200" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-amber-300/60 transition focus:ring" placeholder="Cuéntanos qué volumen gestionas, dónde operas y qué parte de la logística necesitas externalizar."></textarea>
               <p class="mt-1 text-xs text-slate-400">Máximo 1200 caracteres.</p>
               <p class="mt-1 text-xs text-rose-300" data-error-for="consultaLogistica"></p>
             </div>
@@ -101,11 +101,11 @@
             <legend class="px-2 text-sm font-semibold uppercase tracking-wide text-amber-200">Medio de contacto preferido</legend>
             <div class="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
               <label for="contactoCorreo" class="inline-flex items-center gap-2 text-sm font-medium">
-                <input id="contactoCorreo" name="medioContactoPreferido" type="radio" value="correo" required checked class="h-4 w-4 border-white/30 bg-slate-950/60 accent-cyan-300" />
+                <input id="contactoCorreo" name="medioContactoPreferido" type="radio" value="correo" required checked class="h-4 w-4 border-white/30 bg-slate-950/60 accent-amber-300" />
                 Correo electrónico
               </label>
               <label for="contactoTelefono" class="inline-flex items-center gap-2 text-sm font-medium">
-                <input id="contactoTelefono" name="medioContactoPreferido" type="radio" value="telefono" required class="h-4 w-4 border-white/30 bg-slate-950/60 accent-cyan-300" />
+                <input id="contactoTelefono" name="medioContactoPreferido" type="radio" value="telefono" required class="h-4 w-4 border-white/30 bg-slate-950/60 accent-amber-300" />
                 Teléfono
               </label>
             </div>
@@ -113,7 +113,7 @@
 
             <div id="telefonoContainer" class="hidden mt-4" aria-hidden="true">
               <label for="telefonoContacto" class="mb-1 block text-sm font-medium">Teléfono de contacto *</label>
-              <input id="telefonoContacto" name="telefonoContacto" type="tel" pattern="^\+?[0-9]{7,15}$" maxlength="16" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-cyan-200/60 transition focus:ring" />
+              <input id="telefonoContacto" name="telefonoContacto" type="tel" pattern="^\+?[0-9]{7,15}$" maxlength="16" class="field w-full rounded-xl border border-white/20 bg-slate-950/60 px-4 py-3 text-sm outline-none ring-amber-300/60 transition focus:ring" />
               <p class="mt-1 text-xs text-rose-300" data-error-for="telefonoContacto"></p>
             </div>
 
