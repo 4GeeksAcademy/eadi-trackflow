@@ -1,4 +1,5 @@
 
+
 export type ZonaEnvio =
     | "Zona A"
     | "Zona B"
@@ -9,6 +10,10 @@ export type ZonaEnvio =
     | "Alimentos"
     | "Ropa"
     | "Muebles";
+
+    export type Moneda =
+  | "USD"
+  | "EUR";
 
 export type UbicacionAlmacen =
     | "Los Ángeles"
@@ -21,17 +26,20 @@ export type EstadoEnvio =
     | "Cancelado";
 
 export interface Producto {
-    id: string;
-    nombre: string;
-    categoria: CategoriaProducto;
-    precio: number;
-    cantidadStock: number;
-    umbralMinimoStock: number;
-    almacen: UbicacionAlmacen;
-    pesoKg: number;
-    anchoCm: number;
-    altoCm: number;
-    profundidadCm: number;
+  id: string;
+  nombre: string;
+  categoria: CategoriaProducto;
+  precio: number;
+  moneda: Moneda;
+  disponibleEnEspana: boolean;
+  disponibleEnEEUU: boolean;
+  cantidadStock: number;
+  umbralMinimoStock: number;
+  almacen: UbicacionAlmacen;
+  pesoKg: number;
+  anchoCm: number;
+  altoCm: number;
+  profundidadCm: number;
 }
 
 export interface Transportista {
