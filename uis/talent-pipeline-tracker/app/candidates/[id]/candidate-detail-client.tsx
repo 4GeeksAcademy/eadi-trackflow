@@ -36,6 +36,7 @@ function formatDate(isoDate: string) {
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "UTC",
   }).format(new Date(isoDate));
 }
 
@@ -265,7 +266,6 @@ export default function CandidateDetailClient({ initialRecord, initialNotes }: C
         <section className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <h2 className="text-lg font-semibold text-slate-900">Actualizar estado</h2>
-            <p className="mt-1 text-sm text-slate-600">Envia PATCH /records/:id con el estado seleccionado.</p>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <select
                 className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/25"
@@ -292,7 +292,6 @@ export default function CandidateDetailClient({ initialRecord, initialNotes }: C
 
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <h2 className="text-lg font-semibold text-slate-900">Actualizar etapa</h2>
-            <p className="mt-1 text-sm text-slate-600">Envia PATCH /records/:id con la etapa seleccionada.</p>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <select
                 className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/25"
@@ -320,7 +319,6 @@ export default function CandidateDetailClient({ initialRecord, initialNotes }: C
 
         <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <h2 className="text-lg font-semibold text-slate-900">Notas ({record.notes_count})</h2>
-          <p className="mt-1 text-sm text-slate-600">Listado obtenido desde GET /records/:id/notes.</p>
 
           <form className="mt-4 flex flex-col gap-3" onSubmit={handleAddNote}>
             <label className="text-sm font-medium text-slate-700" htmlFor="new-note">
