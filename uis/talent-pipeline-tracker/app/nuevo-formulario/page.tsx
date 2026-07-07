@@ -262,10 +262,6 @@ export default function NuevoFormularioPage() {
             </Link>
           </div>
 
-          <p className="text-sm leading-relaxed text-slate-600">
-            En esta vista puedes registrar una candidatura nueva (POST /records) y editar una existente (PUT /records/:id).
-          </p>
-
           <div className="mt-4 inline-flex rounded-lg border border-slate-200 bg-slate-50 p-1">
             <button
               type="button"
@@ -356,7 +352,6 @@ export default function NuevoFormularioPage() {
           {formMode === "edit" ? (
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <h2 className="text-lg font-semibold text-slate-900">Editar candidatura existente</h2>
-            <p className="mt-1 text-sm text-slate-600">Carga un ID y luego actualiza sus datos con PUT /records/:id.</p>
 
             <div className="mt-4 flex flex-col gap-2 sm:flex-row">
               <Field id="edit-id" label="ID de candidatura" value={editId} onChange={setEditId} />
