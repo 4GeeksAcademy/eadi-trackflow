@@ -33,6 +33,14 @@ export default function Home() {
           Analizar incidencias
         </Link>
 
+
+        <Link
+          href="/suppliers"
+          className="button secondaryButton"
+        >
+          Gestionar proveedores
+        </Link>
+
       </section>
 
     </main>
