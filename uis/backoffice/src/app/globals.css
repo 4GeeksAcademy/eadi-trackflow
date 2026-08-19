@@ -187,6 +187,15 @@ button {
 }
 
 
+.secondaryButton {
+  margin-left:
+    12px;
+
+  background:
+    #434b54;
+}
+
+
 button:disabled {
   opacity:
     0.55;
@@ -421,6 +430,225 @@ button:disabled {
 }
 
 
+.supplierFilters,
+.supplierForm {
+  display:
+    grid;
+
+  gap:
+    14px;
+}
+
+
+.supplierFilters {
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        180px,
+        280px
+      )
+    );
+}
+
+
+.supplierForm {
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        180px,
+        1fr
+      )
+    );
+
+  align-items:
+    end;
+}
+
+
+.supplierForm label,
+.supplierFilters label {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    8px;
+
+  font-weight:
+    700;
+}
+
+
+.supplierForm input,
+.supplierForm select,
+.supplierFilters select,
+.rateEditor input {
+  border:
+    1px solid #d0d7de;
+
+  border-radius:
+    8px;
+
+  padding:
+    10px 12px;
+
+  background:
+    #fff;
+}
+
+
+.fullWidth {
+  grid-column:
+    1 / -1;
+}
+
+
+.categoriesFieldset {
+  border:
+    1px solid #e5e7eb;
+
+  border-radius:
+    10px;
+
+  padding:
+    12px;
+}
+
+
+.categoriesFieldset legend {
+  font-weight:
+    700;
+
+  padding:
+    0 6px;
+}
+
+
+.categoriesGrid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        220px,
+        1fr
+      )
+    );
+
+  gap:
+    10px;
+}
+
+
+.checkboxLabel {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+}
+
+
+.suppliersTableWrap {
+  overflow-x:
+    auto;
+}
+
+
+.suppliersTable {
+  width:
+    100%;
+
+  border-collapse:
+    collapse;
+}
+
+
+.suppliersTable th,
+.suppliersTable td {
+  text-align:
+    left;
+
+  border-bottom:
+    1px solid #edf0f2;
+
+  padding:
+    12px 10px;
+
+  vertical-align:
+    top;
+}
+
+
+.suppliersTable th {
+  color:
+    #656d76;
+
+  font-size:
+    12px;
+}
+
+
+.rateEditor {
+  display:
+    flex;
+
+  gap:
+    8px;
+}
+
+
+.rateEditor input {
+  width:
+    120px;
+}
+
+
+.statusBadge {
+  display:
+    inline-block;
+
+  border-radius:
+    999px;
+
+  padding:
+    4px 10px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+}
+
+
+.statusActive {
+  background:
+    #e6f7ee;
+
+  color:
+    #0f7a42;
+}
+
+
+.statusSuspended {
+  background:
+    #feecec;
+
+  color:
+    #a12020;
+}
+
+
 .satisfactionGrid span {
   display:
     block;
@@ -486,6 +714,23 @@ button:disabled {
   .pageHeader h1 {
     font-size:
       34px;
+  }
+
+
+  .supplierFilters,
+  .supplierForm,
+  .categoriesGrid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .secondaryButton {
+    margin-left:
+      0;
+
+    display:
+      block;
   }
 
 }
