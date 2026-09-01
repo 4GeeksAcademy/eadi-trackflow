@@ -3,6 +3,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { useCallback } from "react";
+import { authorizedFetch } from "@/services/auth";
 
 type SupplierStatus = "active" | "suspended";
 type SupplierCountry = "USA" | "Spain";
@@ -89,7 +90,7 @@ export default function SuppliersPage() {
       const query = params.toString();
       const endpoint = query ? `/backend/suppliers?${query}` : "/backend/suppliers";
 
-      const response = await fetch(endpoint);
+      const response = await authorizedFetch(endpoint);
       const data = await response.json().catch(() => null);
 
       if (!response.ok) {
@@ -182,7 +183,7 @@ export default function SuppliersPage() {
         payload.notes = notes.trim();
       }
 
-      const response = await fetch("/backend/suppliers", {
+      const response = await authorizedFetch("/backend/suppliers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -226,7 +227,7 @@ export default function SuppliersPage() {
     setRowPending((current) => ({ ...current, [supplier.id]: true }));
 
     try {
-      const response = await fetch(`/backend/suppliers/${supplier.id}/rate`, {
+      const response = await authorizedFetch(`/backend/suppliers/${supplier.id}/rate`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ rate_per_shipment: draft }),
@@ -262,7 +263,7 @@ export default function SuppliersPage() {
     setRowPending((current) => ({ ...current, [supplier.id]: true }));
 
     try {
-      const response = await fetch(`/backend/suppliers/${supplier.id}/status`, {
+      const response = await authorizedFetch(`/backend/suppliers/${supplier.id}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: nextStatus }),

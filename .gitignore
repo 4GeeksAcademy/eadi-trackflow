@@ -2,3 +2,5 @@
 __pycache__/
 *.py[cod]
 results.csv
+.env
+data/db.json

@@ -205,6 +205,62 @@ button:disabled {
 }
 
 
+.authPage {
+  min-height: calc(100vh - 68px);
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+
+.authCard {
+  width: min(100%, 420px);
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+}
+
+
+.authCard h1,
+.authCard p {
+  margin: 0;
+}
+
+
+.authCard label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+
+.authCard input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b8bec6;
+  border-radius: 5px;
+}
+
+
+.authCard a {
+  color: #075c9b;
+  font-weight: 700;
+}
+
+
+.formError {
+  color: #b42318;
+}
+
+
+.logoutButton {
+  background: #656d76;
+}
+
+
 .card {
   background:
     white;

@@ -4,6 +4,7 @@ import type {
 
 
 import Link from "next/link";
+import AuthGuard from "./components/auth-guard";
 
 import "./globals.css";
 
@@ -72,7 +73,7 @@ export default function RootLayout({
         </nav>
 
 
-        {children}
+        <AuthGuard>{children}</AuthGuard>
 
       </body>
 

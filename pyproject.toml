@@ -18,3 +18,8 @@ seed = "seed:main"
 
 [tool.setuptools]
 py-modules = ["seed"]
+
+[tool.uv.workspace]
+members = [
+    "services-autho-api",
+]
