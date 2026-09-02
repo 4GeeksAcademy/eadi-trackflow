@@ -39,6 +39,25 @@ export async function register(data: { email: string; password: string; name?: s
   await login(data.email, data.password);
 }
 
+export async function requestPasswordReset(email: string): Promise<string> {
+  const response = await fetch(`${baseUrl()}/auth/forgot-password`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email }) });
+  const payload: unknown = await response.json().catch(() => null);
+  if (!response.ok) throw new Error(message(payload, "No fue posible solicitar el restablecimiento."));
+  return message(payload, "Si esa dirección está registrada, recibirás un enlace en breve.");
+}
+
+export async function resetPassword(token: string, newPassword: string): Promise<void> {
+  const response = await fetch(`${baseUrl()}/auth/reset-password`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token, new_password: newPassword }) });
+  const payload: unknown = await response.json().catch(() => null);
+  if (!response.ok) throw new Error(message(payload, "El enlace expiró o no es válido."));
+}
+
+export async function changePassword(currentPassword: string, newPassword: string): Promise<void> {
+  const response = await authorizedFetch(`${baseUrl()}/auth/change-password`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ current_password: currentPassword, new_password: newPassword }) });
+  const payload: unknown = await response.json().catch(() => null);
+  if (!response.ok) throw new Error(message(payload, "No fue posible cambiar la contraseña."));
+}
+
 export async function getCurrentUser(): Promise<CurrentUser> {
   const response = await authorizedFetch(`${baseUrl()}/auth/me`);
   const payload: unknown = await response.json().catch(() => null);
