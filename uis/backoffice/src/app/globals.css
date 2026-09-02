@@ -251,8 +251,18 @@ button:disabled {
 }
 
 
+.authInlineLink {
+  justify-self: start;
+}
+
+
 .formError {
   color: #b42318;
+}
+
+
+.formSuccess {
+  color: #067647;
 }
 
 
